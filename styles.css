@@ -424,7 +424,7 @@ section {
 }
 
 .skill-group {
-  background: #34504c;
+  background: #f5f7fa;
   border-radius: 18px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.07);
   padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -432,17 +432,23 @@ section {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  color: #23313b;
+  border: 1.5px solid #e1eaea;
 }
 .skill-group:hover {
   box-shadow: 0 8px 28px rgba(0,0,0,0.13);
   transform: translateY(-4px) scale(1.025);
-  background: #3e635d;
+  background: #e6f0fa;
+}
+
+.skill-group:nth-child(even) {
+  background: #e6f0fa;
 }
 
 .skill-group h4 {
   margin-top: 0;
   margin-bottom: 1.2rem;
-  color: var(--accent);
+  color: #23313b;
   font-size: 1.15rem;
   letter-spacing: 0.5px;
   font-weight: bold;
@@ -462,34 +468,33 @@ section {
   display: flex;
   align-items: center;
   gap: 0.7em;
-  color: #eafaf7;
+  color: #23313b;
   padding: 0.32em 0;
   transition: color 0.18s;
 }
 
 .skill-group li i {
   font-size: 1.25em;
-  color: var(--accent);
+  color: var(--accent, #3e635d);
   min-width: 1.5em;
   text-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: color 0.17s;
 }
 
 .skill-group li:hover, .skill-group li:focus {
-  color: #ffe066;
+  color: #3e635d;
 }
 
 .skill-group li:hover i, .skill-group li:focus i {
-  color: #ffe066;
-  text-shadow: 0 2px 12px rgba(255,224,102,0.15);
+  color: #3e635d;
+  text-shadow: 0 2px 12px rgba(62,99,93,0.15);
 }
 
-/* Section heading for consistency */
 #skills h2 {
   font-size: 2.1rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: var(--heading);
+  color: var(--heading, #23313b);
   letter-spacing: -0.5px;
 }
 
@@ -1067,17 +1072,22 @@ a:focus, button:focus {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
-#about .container {
-  margin: 2.5rem auto;
+#about .container.split {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem; /* Decreased gap for a tighter layout */
+  max-width: 1100px;
+  padding: 3.5rem 2rem;
   background: #2e4d4a;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
-  /* Remove max-width here if using .about-box for width */
+  margin: 3rem auto;
+  position: relative;
 }
 
 #about h2 {
-  color: var(--accent);
+  color: #ffe066;
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 700;
@@ -1093,7 +1103,7 @@ a:focus, button:focus {
 }
 
 .about-box {
-  max-width: 950px;  /* Instead of 600-700px */
+  max-width: 950px;
   padding: 3rem 3.5rem;
 }
 
@@ -1132,9 +1142,20 @@ a:focus, button:focus {
   margin: 3rem auto;
   position: relative;
 }
-#about .container.split > div {
-  flex: 2;
-  min-width: 0;
+#about .about-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-right: 1.5rem;
+  min-width: 180px;
+}
+.about-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 #about .about-stats {
   flex: 1;
@@ -1173,20 +1194,22 @@ a:focus, button:focus {
 }
 
 @media (max-width: 900px) {
+  #about .container.split {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
   .about-aside {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1.5rem;
-    margin-top: 1.2rem;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
   }
   .about-avatar {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 0;
-  }
-  .about-stats-heading {
-    margin-bottom: 0.7rem;
-    font-size: 1rem;
   }
 }
