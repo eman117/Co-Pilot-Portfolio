@@ -247,6 +247,15 @@ nav li a:hover::after, nav li a.active::after {
   margin-top: 0.5em;
 }
 
+.hero::before,
+#home::before,
+.container::before,
+.hero-flex::before {
+  content: none !important;
+  background: none !important;
+  border: none !important;
+}
+
 .cta-row {
   display: flex;
   gap: 1rem;
