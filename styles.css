@@ -195,7 +195,7 @@ nav li a:hover::after, nav li a.active::after {
   }
 }
 
-/* Hero / Professional Summary */
+/* HERO / PROFESSIONAL SUMMARY */
 .hero {
   position: relative;
   background: var(--section-bg);
@@ -234,16 +234,27 @@ nav li a:hover::after, nav li a.active::after {
 }
 .hero-info h1 {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   font-size: 2.6rem;
   line-height: 1.1;
+  color: #fff;
 }
-.hero-info h2 {
-  margin-top: 0;
-  margin-bottom: 32px;
-  font-size: 2rem;
-  line-height: 1.15;
+/* BULLET TITLES */
+.hero-titles {
+  list-style: disc inside;
+  margin: 0 0 32px 0;
+  padding-left: 1.2rem;
+  color: #ffe066;
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.7;
 }
+.hero-titles li {
+  margin-bottom: 0.3em;
+  color: #ffe066;
+  letter-spacing: 0.01em;
+}
+
 .hero-info p {
   line-height: 1.7;
   margin-bottom: 44px;
@@ -263,7 +274,10 @@ nav li a:hover::after, nav li a.active::after {
   color: var(--accent);
 }
 @media (max-width: 900px) {
-  .hero-stats { flex-direction: column; gap: 1rem; }
+  .hero-flex   { flex-direction: column; gap: 2.5rem; padding: 2rem 1rem; }
+  .hero-info   { padding: 32px 0; min-height: unset; max-width: 100%; }
+  .hero-stats  { flex-direction: column; gap: 1rem; }
+  .hero-titles { font-size: 1rem; margin-bottom: 1.3rem; }
 }
 .cta-row {
   margin-top: 36px;
