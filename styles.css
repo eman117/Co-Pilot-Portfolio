@@ -195,96 +195,29 @@ nav li a:hover::after, nav li a.active::after {
   }
 }
 
-/* HERO / PROFESSIONAL SUMMARY */
-.hero {
-  position: relative;
-  background: var(--section-bg);
-  overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: url('/assets/data-pattern.svg') center/cover no-repeat;
-  opacity: 0.13;
-  pointer-events: none;
-  z-index: 0;
-}
-.hero-flex { position: relative; z-index: 1; }
-
-.hero-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6rem;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-.hero-info {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 620px;
-  min-height: 420px;
-  padding: 72px 0;
-}
-.hero-info h1 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 2.6rem;
-  line-height: 1.1;
-  color: #fff;
-}
-/* BULLET TITLES */
-.hero-titles {
-  list-style: disc inside;
-  margin: 0 0 32px 0;
-  padding-left: 1.2rem;
-  color: #ffe066;
-  font-size: 1.18rem;
-  font-weight: 600;
-  line-height: 1.7;
-}
-.hero-titles li {
-  margin-bottom: 0.3em;
-  color: #ffe066;
-  letter-spacing: 0.01em;
-}
-
-.hero-info p {
-  line-height: 1.7;
-  margin-bottom: 44px;
-  font-size: 1.25rem;
-  color: #d8e7e2;
-}
-
-/* --- HERO STATS IMPROVED --- */
 .hero-stats {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  gap: 2.3rem;
+  justify-content: center;
+  gap: 3rem;
   background: rgba(30, 55, 52, 0.08);
   border-radius: 16px;
   padding: 1.7rem 2.5rem;
   margin-top: 2.5rem;
-  min-width: 220px;
-  max-width: 350px;
+  min-width: 250px;
+  max-width: 400px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.06);
 }
-.hero-stats .stat-block {
+
+.stat-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100px;
+  min-width: 110px;
 }
 
-.hero-stats .stat-value {
+.stat-value {
   font-size: 2rem;
   font-weight: 700;
   color: #b1d3d0;
@@ -292,7 +225,7 @@ nav li a:hover::after, nav li a.active::after {
   letter-spacing: 0.01em;
 }
 
-.hero-stats .stat-label {
+.stat-label {
   font-size: 1.09rem;
   color: #b1d3d0;
   font-weight: 500;
@@ -300,10 +233,11 @@ nav li a:hover::after, nav li a.active::after {
 }
 
 @media (max-width: 900px) {
-  .hero-flex   { flex-direction: column; gap: 2.5rem; padding: 2rem 1rem; }
-  .hero-info   { padding: 32px 0; min-height: unset; max-width: 100%; }
-  .hero-titles { font-size: 1rem; margin-bottom: 1.3rem; }
-  .hero-stats  {
+  .hero-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .hero-stats {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -312,8 +246,8 @@ nav li a:hover::after, nav li a.active::after {
     max-width: 380px;
     padding: 1.1rem 1rem;
   }
-  .hero-stats .stat-block {
-    min-width: 90px;
+  .stat-block {
+    min-width: 100px;
   }
 }
 @media (max-width: 600px) {
@@ -323,51 +257,6 @@ nav li a:hover::after, nav li a.active::after {
     max-width: 96vw;
     padding: 1rem 0.5rem;
   }
-}
-
-.cta-row {
-  margin-top: 36px;
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-.cta, .btn {
-  background: var(--accent);
-  color: var(--eerie-black);
-  border: none;
-  border-radius: var(--radius);
-  padding: 0.7em 1.5em;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 0.5em;
-  display: inline-block;
-  transition: background 0.2s, color 0.2s;
-  cursor: pointer;
-}
-.cta-alt, .btn-alt {
-  background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 0.7em 1.5em;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 0.5em;
-  display: inline-block;
-  transition: background 0.2s, color 0.2s;
-  cursor: pointer;
-}
-.cta:hover, .btn:hover {
-  background: #b1d3d0;
-  color: var(--night);
-}
-.cta-alt:hover, .btn-alt:hover {
-  background: var(--accent);
-  color: var(--eerie-black);
-}
-.muted {
-  color: #bdd6d3;
-  font-size: 0.95em;
 }
 
 /* Sections */
