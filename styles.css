@@ -1137,6 +1137,27 @@ a:focus, button:focus {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+#about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 0;
+}
+
+.about-center-box {
+  background: var(--card-bg, #26413C);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2.5rem 2.2rem;
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto;
+  color: #f6f6f6;
+  text-align: left;
+}
+
 #about .container.split {
   display: flex;
   align-items: flex-start;
@@ -1152,6 +1173,7 @@ a:focus, button:focus {
 }
 
 #about h2 {
+  text-align: center;
   color: #ffe066;
   margin-bottom: 1.5rem;
   font-size: 2rem;
@@ -1164,7 +1186,8 @@ a:focus, button:focus {
   font-size: 1.13rem;
   line-height: 1.8;
   margin-bottom: 2.1rem;
-  max-width: 760px;
+  max-width: 100%;
+  text-align: left;
 }
 
 .about-box {
