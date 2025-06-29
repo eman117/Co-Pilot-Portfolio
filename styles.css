@@ -239,7 +239,6 @@ nav li a:hover::after, nav li a.active::after {
   line-height: 1.1;
   color: #fff;
 }
-
 /* BULLET TITLES */
 .hero-titles {
   list-style: disc inside;
