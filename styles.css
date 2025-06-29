@@ -261,24 +261,70 @@ nav li a:hover::after, nav li a.active::after {
   font-size: 1.25rem;
   color: #d8e7e2;
 }
+
+/* --- HERO STATS IMPROVED --- */
 .hero-stats {
   display: flex;
-  gap: 2.5rem;
-  margin-top: 2.2rem;
-  color: #b1d3d0;
-  font-size: 1.12rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.3rem;
+  background: rgba(30, 55, 52, 0.08);
+  border-radius: 16px;
+  padding: 1.7rem 2.5rem;
+  margin-top: 2.5rem;
+  min-width: 220px;
+  max-width: 350px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
 }
-.hero-stats div strong {
-  display: block;
+.hero-stats .stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.hero-stats .stat-value {
   font-size: 2rem;
-  color: var(--accent);
+  font-weight: 700;
+  color: #b1d3d0;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.01em;
 }
+
+.hero-stats .stat-label {
+  font-size: 1.09rem;
+  color: #b1d3d0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 @media (max-width: 900px) {
   .hero-flex   { flex-direction: column; gap: 2.5rem; padding: 2rem 1rem; }
   .hero-info   { padding: 32px 0; min-height: unset; max-width: 100%; }
-  .hero-stats  { flex-direction: column; gap: 1rem; }
   .hero-titles { font-size: 1rem; margin-bottom: 1.3rem; }
+  .hero-stats  {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2.2rem auto 0 auto;
+    width: 100%;
+    max-width: 380px;
+    padding: 1.1rem 1rem;
+  }
+  .hero-stats .stat-block {
+    min-width: 90px;
+  }
 }
+@media (max-width: 600px) {
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 96vw;
+    padding: 1rem 0.5rem;
+  }
+}
+
 .cta-row {
   margin-top: 36px;
   display: flex;
