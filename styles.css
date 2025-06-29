@@ -1150,13 +1150,14 @@ a:focus, button:focus {
   background: var(--card-bg, #26413C);
   border-radius: 1rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 2.5rem 3.5rem;   /* wider padding for larger area */
+  padding: 2.5rem 2.5rem;   /* moderate padding for breathing room */
   width: 100%;
-  max-width: 1100px;        /* allows much more width */
-  min-width: 320px;
+  max-width: none;           /* removes the width restriction */
+  min-width: 0;
   margin: 0 auto;
   color: #f6f6f6;
   text-align: left;
+  box-sizing: border-box;
 }
 
 #about .container.split {
