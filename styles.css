@@ -1150,9 +1150,10 @@ a:focus, button:focus {
   background: var(--card-bg, #26413C);
   border-radius: 1rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 2.5rem 2.2rem;
-  max-width: 540px;
+  padding: 2.5rem 3.5rem;   /* wider padding for larger area */
   width: 100%;
+  max-width: 1100px;        /* allows much more width */
+  min-width: 320px;
   margin: 0 auto;
   color: #f6f6f6;
   text-align: left;
@@ -1183,7 +1184,7 @@ a:focus, button:focus {
 
 #about p {
   color: #eafaf7;
-  font-size: 1.13rem;
+  font-size: 1.18rem;
   line-height: 1.8;
   margin-bottom: 2.1rem;
   max-width: 100%;
