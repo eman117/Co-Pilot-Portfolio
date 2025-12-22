@@ -1275,3 +1275,60 @@ a:focus, button:focus {
     margin-bottom: 0;
   }
 }
+/* 1. Fixes the "jagged" card heights in AAR and Project sections */
+.aar-image-wrap, .project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  object-fit: cover;
+  display: block;
+}
+
+/* 2. Fixes the Lightbox layout (your current one is hidden) */
+#lightbox-modal {
+  display: none; 
+  position: fixed;
+  inset: 0; /* fills screen */
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#lightbox-modal.open {
+  display: flex; /* Shown when JS triggers it */
+}
+
+.modal-content img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/* 3. Mobile Navigation hidden state fix */
+@media (max-width: 770px) {
+  nav ul {
+    display: none; /* Hide by default on mobile */
+  }
+  nav ul.open {
+    display: flex !important; /* Show when JS toggles it */
+  }
+}
+
+/* 4. Accessibility: Visible focus for recruiters using keyboards */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
