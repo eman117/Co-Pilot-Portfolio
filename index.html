@@ -539,15 +539,24 @@
   </div>
 </section>
 
-  <!-- Lightbox Modal (place before </body>) -->
-<div id="lightbox-modal" class="modal" aria-modal="true" role="dialog" aria-label="Image preview" aria-hidden="true" tabindex="-1">
-    <button class="lightbox-close">×</button>
-  <img id="lightbox-img" ...>
-</div>
+<!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="modal" aria-modal="true" role="dialog" aria-label="Image preview" aria-hidden="true" tabindex="-1">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <div class="modal-content">
+      <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+  </div>
+
+  <!-- Footer (Added for a professional finish) -->
+  <footer style="padding: 2rem; text-align: center; background: var(--night); color: var(--accent);">
+    <p>&copy; 2025 Emmanuel Elizarraga. Built with vanilla HTML/CSS.</p>
+  </footer>
+
+  <!-- Single JS file link -->
+  <script src="script.js"></script>
 </body>
 </html>
-</body>
-</html>
+
 
 
 
